@@ -29,7 +29,9 @@
     "checkTs": "tsc --noEmit",
     "jest": "jest --coverage=false",
     "jest:coverage": "jest --coverage=true",
-    "jest:precommit": "jest --coverage=false --onlyChanged --passWithNoTests"
+    "jest:precommit": "jest --coverage=false --onlyChanged --passWithNoTests",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "browserslist": {
     "production": [
@@ -46,6 +48,12 @@
   "devDependencies": {
     "@commitlint/cli": "13.2.0",
     "@commitlint/config-conventional": "13.2.0",
+    "@storybook/addon-actions": "^6.3.9",
+    "@storybook/addon-essentials": "^6.3.9",
+    "@storybook/addon-links": "^6.3.9",
+    "@storybook/node-logger": "^6.3.9",
+    "@storybook/preset-create-react-app": "^3.2.0",
+    "@storybook/react": "^6.3.9",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.1.1",
     "@testing-library/react-hooks": "^7.0.2",
@@ -74,6 +82,18 @@
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
       "eslint --cache --fix"
+    ]
+  },
+  "eslintConfig": {
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   }
 }
