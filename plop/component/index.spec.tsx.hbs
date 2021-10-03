@@ -1,0 +1,11 @@
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+
+import { {{ properCase componentName }} } from '..';
+
+describe('<{{ properCase componentName }}  />', () => {
+it('should match snapshot', () => {
+const loadingIndicator = render(<{{ properCase componentName }} />);
+expect(loadingIndicator.container.firstChild).toMatchSnapshot();
+});
+});
