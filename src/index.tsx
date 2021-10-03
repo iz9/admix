@@ -4,15 +4,18 @@ import { App } from './app'
 import reportWebVitals from './reportWebVitals'
 import { Provider } from 'react-redux'
 import { configureAppStore } from 'state/configureStore'
+import { ThemeProvider } from 'styles/theme/ThemeProvider'
 
 const store = configureAppStore()
 const MOUNT_NODE = document.getElementById('root')
 
 ReactDOM.render(
   <Provider store={store}>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
+    <ThemeProvider>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </ThemeProvider>
   </Provider>,
   MOUNT_NODE,
 )
