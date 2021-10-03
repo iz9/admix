@@ -3,3 +3,4 @@
 
 npm run checkTs
 npx lint-staged
+npm run jest:precommit
