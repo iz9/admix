@@ -30,6 +30,10 @@ const config = {
       parserOptions: { ecmaVersion: 12, sourceType: 'script' },
       rules: { '@typescript-eslint/no-var-requires': 'off' },
     },
+    {
+      files: ['./plop/**/*.ts'],
+      rules: { '@typescript-eslint/no-var-requires': 'off' },
+    },
   ],
 }
 /* ***** Add prettier options **** */ const prettierOptions = JSON.parse(
