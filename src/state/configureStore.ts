@@ -9,6 +9,8 @@ import type {
 } from '@reduxjs/toolkit'
 import { createInjectorsEnhancer } from 'redux-injectors'
 import createSagaMiddleware from 'redux-saga'
+import { client } from '../api/axios'
+import axiosMiddlewareFactory from 'redux-axios-middleware'
 
 import { createReducer } from './reducers'
 
@@ -20,10 +22,11 @@ export function configureAppStore(): EnhancedStore<
   /*eslint-enable*/
   const reduxSagaMonitorOptions = {}
   const sagaMiddleware = createSagaMiddleware(reduxSagaMonitorOptions)
+  const axiosMiddleware = axiosMiddlewareFactory(client)
   const { run: runSaga } = sagaMiddleware
 
   // Create the store with saga middleware
-  const middlewares = [sagaMiddleware]
+  const middlewares = [sagaMiddleware, axiosMiddleware]
 
   const enhancers = [
     createInjectorsEnhancer({
