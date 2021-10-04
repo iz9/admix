@@ -1,48 +1,52 @@
 /**
- * Component Generator
+ * Component Generator config (plop)
+ *
  */
 
 import { Actions, PlopGeneratorConfig } from 'node-plop'
-import * as inquirer from 'inquirer'
 
 import { pathExists } from '../utils'
-import { baseGeneratorPath } from '../paths'
+import { ComponentDomain, getBaseGeneratorPath } from '../paths'
 
-inquirer.registerPrompt('directory', require('inquirer-directory'))
-
-export enum ComponentPromptNames {
+enum ComponentPromptNames {
+  componentDomain = 'componentDomain',
   componentName = 'componentName',
   path = 'path',
-  isPureStyledComponent = 'isPureStyledComponent',
 }
 
-type Answers = { [P in ComponentPromptNames]: string }
+type Answers = {
+  [ComponentPromptNames.componentName]: string
+  [ComponentPromptNames.path]: string
+  [ComponentPromptNames.componentDomain]: ComponentDomain
+}
 
 export const componentGenerator: PlopGeneratorConfig = {
   description: 'Add a component',
   prompts: [
     {
+      type: 'list',
+      name: ComponentPromptNames.componentDomain,
+      message: 'Select component domain',
+      choices: [
+        { name: 'App Component', value: ComponentDomain.app },
+        { name: 'UI-LIB Component', value: ComponentDomain.uiLib },
+      ],
+    },
+    {
       type: 'input',
       name: ComponentPromptNames.componentName,
       message: 'What should it be called?',
-    },
-    {
-      type: 'directory',
-      name: ComponentPromptNames.path,
-      message: 'Where do you want it to be created?',
-      basePath: `${baseGeneratorPath}`,
-    } as any,
-    {
-      type: 'confirm',
-      name: ComponentPromptNames.isPureStyledComponent,
-      message: 'Is this pure styled component?',
     },
   ],
   actions: data => {
     const answers = data as Answers
 
-    const componentPath = `${baseGeneratorPath}/${answers.path}/{{properCase ${ComponentPromptNames.componentName}}}`
-    const actualComponentPath = `${baseGeneratorPath}/${answers.path}/${answers.componentName}`
+    const componentPath = `${getBaseGeneratorPath(
+      answers.componentDomain,
+    )}/{{properCase ${ComponentPromptNames.componentName}}}`
+    const actualComponentPath = `${getBaseGeneratorPath(
+      answers.componentDomain,
+    )}/${answers.componentName}`
 
     if (pathExists(actualComponentPath)) {
       throw new Error(`Component '${answers.componentName}' already exists`)

@@ -32,7 +32,12 @@ const config = {
     },
     {
       files: ['./plop/**/*.ts'],
-      rules: { '@typescript-eslint/no-var-requires': 'off' },
+      extends: ['eslint:recommended', 'prettier'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off',
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': 'error',
+      },
     },
   ],
 }

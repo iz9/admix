@@ -4,7 +4,7 @@ import { App } from './app'
 import reportWebVitals from './reportWebVitals'
 import { Provider } from 'react-redux'
 import { configureAppStore } from 'state/configureStore'
-import { ThemeProvider } from 'styles/theme/ThemeProvider'
+import { ThemeProvider } from 'ui-lib/theme/ThemeProvider'
 
 const store = configureAppStore()
 const MOUNT_NODE = document.getElementById('root')

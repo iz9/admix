@@ -1,27 +1,18 @@
+/** @jsxImportSource theme-ui */
+
+import React from 'react'
+
+interface {{ properCase componentName }}Props {}
+
 /**
 *
 * {{ properCase componentName }} component
 *
 */
-
-import styled from 'styled-components/macro'
-{{#unless isPureStyledCompoent}}
-import React from 'react'
-{{/unless}}
-
-
-interface {{ properCase componentName }}Props {}
-
-{{#if isPureStyledComponent}}
-  const {{ properCase componentName }} = styled.div<{{ properCase componentName }}Props>``
-{{else}}
-  const Div = styled.div``
-
-  export const {{ properCase componentName }} = (props: {{ properCase componentName }}Props) => {
+export const {{ properCase componentName }} = (props: {{ properCase componentName }}Props) => {
 
   return (
-  <Div>
-    {'{{ properCase componentName }}'}
-  </Div>
-  )}
-{{/if}}
+    <div>
+      {'{{ properCase componentName }}'}
+    </div>
+)}

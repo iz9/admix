@@ -1,4 +1,3 @@
-import { ThemeState } from '../../styles/theme/slice/types'
 // [IMPORT NEW CONTAINER STATE ABOVE] < Needed for generating containers seamlessly
 
 /*
@@ -10,6 +9,5 @@ import { ThemeState } from '../../styles/theme/slice/types'
 */
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface RootState {
-  theme?: ThemeState
   // [INSERT NEW REDUCER KEY ABOVE] < Needed for generating containers seamlessly
 }

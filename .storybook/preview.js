@@ -1,9 +1,9 @@
-import {ThemeProvider} from "../src/styles/theme/ThemeProvider";
-import {configureAppStore} from "../src/state/configureStore";
-import {Provider} from "react-redux";
+import {ThemeProvider} from "../src/ui-lib/theme";
+import {useEffect} from "react";
+import {loadFont} from "../src/ui-lib/utils/loadFont";
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: {argTypesRegex: "^on[A-Z].*"},
   controls: {
     matchers: {
       color: /(background|color)$/i,
@@ -12,15 +12,16 @@ export const parameters = {
   },
 }
 
-const store = configureAppStore()
 
 export const decorators = [
-  (Story) => (
-    <Provider store={store}>
+  (Story) => {
+    useEffect(() => {
+        loadFont()
+    },[])
+    return (
       <ThemeProvider>
-        <Story />
+        <Story/>
       </ThemeProvider>
-    </Provider>
-
-  ),
+    )
+  }
 ]
