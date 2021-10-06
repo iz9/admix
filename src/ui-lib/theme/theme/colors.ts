@@ -16,4 +16,4 @@ export const colors = {
   bgBanner: '#2522b5',
 }
 
-export type ThemeColor = keyof typeof colors
+export type ThemeColor = keyof typeof colors | 'inherit'
