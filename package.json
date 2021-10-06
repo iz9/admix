@@ -35,7 +35,7 @@
     "jest:precommit": "jest --coverage=false --onlyChanged --passWithNoTests",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "plop": "TS_NODE_PROJECT='./plop/ts-node.tsconfig.json' plop --plopfile plop/plopfile.ts"
+    "plop": "cross-env TS_NODE_PROJECT=\"./plop/ts-node.tsconfig.json\" plop --plopfile plop/plopfile.ts"
   },
   "browserslist": {
     "production": [
@@ -67,6 +67,7 @@
     "@typescript-eslint/eslint-plugin": "^4.32.0",
     "@typescript-eslint/parser": "^4.32.0",
     "commitizen": "4.2.4",
+    "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "7.32.0",
     "eslint-config-prettier": "8.3.0",
