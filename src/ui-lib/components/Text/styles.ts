@@ -3,6 +3,7 @@ const base = {
   fontFamily: 'body',
   fontSize: 'm',
   fontWeight: 'body',
+  lineHeight: 1.25,
 }
 
 const primary = {
@@ -17,6 +18,7 @@ const input = {
 const tag = {
   ...base,
   fontSize: 's',
+  lineHeight: 1,
 }
 
 const title = {

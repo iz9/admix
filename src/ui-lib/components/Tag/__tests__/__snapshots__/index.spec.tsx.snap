@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tag  /> should match snapshot 1`] = `
+<div
+  class="css-pnjjwj-Tag"
+>
+  <span
+    class="css-c1pw5t-Text"
+  >
+    tag
+  </span>
+</div>
+`;
