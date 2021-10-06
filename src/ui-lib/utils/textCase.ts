@@ -1,7 +1,7 @@
 export enum TextCase {
-  asIs,
-  uppercase,
-  lowercase,
+  asIs = 'asIs',
+  uppercase = 'uppercase',
+  lowercase = 'lowercase',
 }
 
 export function convertCase(
