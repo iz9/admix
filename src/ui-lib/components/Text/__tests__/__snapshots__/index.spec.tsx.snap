@@ -2,6 +2,45 @@
 
 exports[`<Text  /> should match snapshot 1`] = `
 <span
-  class="css-sfcdz2-Text"
-/>
+  class="css-l20krr-Text"
+  data-testid="0"
+>
+  text
+</span>
+`;
+
+exports[`<Text  /> should match snapshot 2`] = `
+<span
+  class="css-15cv6um-Text"
+  data-testid="1"
+>
+  text
+</span>
+`;
+
+exports[`<Text  /> should match snapshot 3`] = `
+<span
+  class="css-xkjh4q-Text"
+  data-testid="2"
+>
+  text
+</span>
+`;
+
+exports[`<Text  /> should match snapshot 4`] = `
+<span
+  class="css-gqz2mm-Text"
+  data-testid="3"
+>
+  text
+</span>
+`;
+
+exports[`<Text  /> should match snapshot 5`] = `
+<span
+  class="css-102bbdx-Text"
+  data-testid="4"
+>
+  text
+</span>
 `;

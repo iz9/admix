@@ -3,7 +3,7 @@
 import React from 'react'
 import type { ThemeUIStyleObject } from 'theme-ui'
 import type { TextVariants } from './styles'
-import { ThemeColor } from '../../theme/theme'
+import { ThemeColor } from 'ui-lib/theme'
 
 interface TextProps {
   /** Color name according to the theme */

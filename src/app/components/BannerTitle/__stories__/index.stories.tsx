@@ -7,10 +7,6 @@ import { Box } from 'theme-ui'
 export default {
   title: 'UI/BannerTitle',
   component: BannerTitle,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  // argTypes: {
-  //   onClick: { action: 'clicked' },
-  // },
 } as ComponentMeta<typeof BannerTitle>
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
