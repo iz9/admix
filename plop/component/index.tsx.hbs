@@ -1,18 +1,20 @@
 /** @jsxImportSource theme-ui */
 
 import React from 'react'
+import { ThemeUIStyleObject } from 'theme-ui'
 
-interface {{ properCase componentName }}Props {}
+
+interface {{ properCase componentName }}Props {
+sx?: ThemeUIStyleObject
+}
 
 /**
 *
 * {{ properCase componentName }} component
 *
 */
-export const {{ properCase componentName }} = (props: {{ properCase componentName }}Props) => {
+export const {{ properCase componentName }}: React.FC<{{ properCase componentName }}Props> = props => {
 
   return (
-    <div>
-      {'{{ properCase componentName }}'}
-    </div>
+    <div {...props}/>
 )}

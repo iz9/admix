@@ -9,13 +9,13 @@ title: 'UI/{{ properCase componentName }}',
 component: {{ properCase componentName }},
 // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
 // argTypes: {
-//   backgroundColor: { control: 'color' },
+//   onClick: { action: 'clicked' },
 // },
 } as ComponentMeta<typeof {{ properCase componentName }}>
 
   // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-  const Template: ComponentStory<typeof {{ properCase componentName }}> = () => (
-  <{{ properCase componentName }} />
+  const Template: ComponentStory<typeof {{ properCase componentName }}> = (args) => (
+  <{{ properCase componentName }} {...args} />
   )
 
   export const Primary = Template.bind({})
