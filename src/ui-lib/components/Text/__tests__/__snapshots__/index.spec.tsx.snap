@@ -2,6 +2,6 @@
 
 exports[`<Text  /> should match snapshot 1`] = `
 <span
-  class="css-vurnku"
+  class="css-sfcdz2-Text"
 />
 `;

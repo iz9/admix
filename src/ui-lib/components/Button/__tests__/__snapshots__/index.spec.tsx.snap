@@ -2,7 +2,7 @@
 
 exports[`<Button  /> should match snapshot 1`] = `
 <button
-  class="css-1jrhli3-Button"
+  class="css-55euh5-Button"
 >
   Button
 </button>

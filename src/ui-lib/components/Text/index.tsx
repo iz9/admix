@@ -1,11 +1,16 @@
 /** @jsxImportSource theme-ui */
 
 import React from 'react'
-import { convertCase, TextCase } from '../../utils/textCase'
-import { Text as ThemeUIText, ThemeUIStyleObject } from 'theme-ui'
+import type { ThemeUIStyleObject } from 'theme-ui'
+import type { TextVariants } from './styles'
+import { ThemeColor } from '../../theme/theme'
 
 interface TextProps {
-  variant?: TextCase
+  /** Color name according to the theme */
+  color?: ThemeColor
+  /** Variants according to the theme */
+  variant?: TextVariants
+  /** ThemeUI styling object */
   sx?: ThemeUIStyleObject
 }
 
@@ -14,21 +19,11 @@ interface TextProps {
  * Text component
  *
  */
-const Text: React.FC<TextProps> = ({
-  variant = TextCase.asIs,
-  children,
+export const Text: React.FC<TextProps> = ({
+  variant = 'primary',
+  color = 'black',
   sx,
-  ...rest
+  ...props
 }) => {
-  let value
-  if (typeof children === 'string') {
-    value = convertCase(children, variant)
-  }
-  return (
-    <ThemeUIText sx={sx} {...rest}>
-      {value ?? children}
-    </ThemeUIText>
-  )
+  return <span sx={{ variant: `text.${variant}`, color, ...sx }} {...props} />
 }
-
-export { Text, TextCase as TextVariant }

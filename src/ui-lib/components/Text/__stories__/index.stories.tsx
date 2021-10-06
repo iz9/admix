@@ -1,6 +1,7 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import { Text, TextVariant } from '..'
+import { Text } from '..'
+import { Box } from 'theme-ui'
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -18,26 +19,5 @@ const Template: ComponentStory<typeof Text> = args => <Text {...args} />
 export const Primary = Template.bind({})
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
-  children: 'Text',
-}
-
-export const Uppercase = Template.bind({})
-Uppercase.args = {
-  ...Primary.args,
-  variant: TextVariant.uppercase,
-}
-
-export const Lowercase = Template.bind({})
-Lowercase.args = {
-  ...Primary.args,
-  variant: TextVariant.lowercase,
-}
-
-export const UpperCaseWithPrimaryColor = Template.bind({})
-UpperCaseWithPrimaryColor.args = {
-  children: 'Uppercase with primary color',
-  variant: TextVariant.uppercase,
-  sx: {
-    color: 'primary',
-  },
+  children: 'Text value',
 }
