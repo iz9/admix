@@ -1,30 +1,18 @@
+/** @jsxImportSource theme-ui */
 import { ThemeUIContextValue, useThemeUI } from 'theme-ui'
 import { makeTheme } from './utils'
 import { fontSizes } from './fontSizes'
 import { fontWeights } from './fontWeights'
+import { colors } from './colors'
+import { buttons } from 'ui-lib/components/Button/styles'
+import { text } from 'ui-lib/components/Text/styles'
+
 import type { FontSizesAlias } from './fontSizes'
 import type { FontWeightsAlias } from './fontWeights'
-
-import { buttons } from 'ui-lib/components/Button/styles'
+import type { ThemeColor } from './colors'
 
 const theme = makeTheme({
-  colors: {
-    primary: '#2622B5',
-    secondary: '#0C0980',
-    white: '#ffffff',
-    black: '#0B0F32',
-    black900: '#232747',
-    black700: '#545770',
-    black400: '#9D9FAD',
-    gray: '#7F8193',
-    gray800: '#C4CAD6',
-    blueCrayola: '#1A73E9',
-    accentPink: '#ED2EFF',
-    background: {
-      primary: '#fff',
-      secondary: '#fff',
-    },
-  },
+  colors,
   fontSizes,
   fontWeights,
   fonts: {
@@ -37,6 +25,7 @@ const theme = makeTheme({
     },
   },
   buttons,
+  text,
 })
 
 type ExactTheme = typeof theme
@@ -47,4 +36,4 @@ interface ExactContextValue extends Omit<ThemeUIContextValue, 'theme'> {
 
 const useTheme = useThemeUI as unknown as () => ExactContextValue
 export { useTheme, theme }
-export type { FontWeightsAlias, FontSizesAlias }
+export type { FontWeightsAlias, FontSizesAlias, ThemeColor }
