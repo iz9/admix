@@ -1,4 +1,4 @@
 import { ThemeProvider } from './ThemeProvider'
-import { useTheme } from './theme'
+import { useTheme, theme } from './theme'
 
-export { ThemeProvider, useTheme }
+export { ThemeProvider, useTheme, theme }
