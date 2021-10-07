@@ -1,3 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+export { hexToCSSFilter } from 'hex-to-css-filter/dist/cjs' // todo: find more performant implementation
+
 /**
  * Converts hex color to RGB
  * @param h - hex color to convert

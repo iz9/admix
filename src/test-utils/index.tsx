@@ -1,9 +1,6 @@
 import React from 'react'
 import { render, RenderOptions } from '@testing-library/react'
-import { withTestId } from './withTestId'
 import { ThemeProvider } from '../ui-lib/theme'
-import { hexToRGB } from './hexToRgb'
-import { times } from './times'
 
 const AllTheProviders: React.FC = ({ children }) => (
   <ThemeProvider>{children as React.ReactChild}</ThemeProvider>
@@ -15,4 +12,6 @@ const customRender = (
 ) => render(ui, { wrapper: AllTheProviders, ...options })
 
 export * from '@testing-library/react'
-export { customRender as render, withTestId, hexToRGB, times }
+export { customRender as render }
+export { times } from './times'
+export { withTestId } from './withTestId'
