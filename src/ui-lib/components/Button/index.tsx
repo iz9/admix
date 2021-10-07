@@ -1,7 +1,7 @@
 /** @jsxImportSource theme-ui */
 
 import React from 'react'
-import type { ThemeUIStyleObject } from 'theme-ui'
+import type { ThemeUICSSObject } from 'theme-ui'
 import type { ButtonVariant } from './styles'
 
 interface ButtonProps {
@@ -10,7 +10,7 @@ interface ButtonProps {
   /** Same as html disabled attr */
   disabled?: boolean
   /** ThemeUI styling object */
-  sx?: ThemeUIStyleObject
+  sx?: ThemeUICSSObject
   /** Button variant according to the theme */
   variant?: ButtonVariant
 }

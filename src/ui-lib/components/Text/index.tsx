@@ -1,7 +1,7 @@
 /** @jsxImportSource theme-ui */
 
 import React from 'react'
-import type { ThemeUIStyleObject } from 'theme-ui'
+import type { ThemeUICSSObject } from 'theme-ui'
 import type { TextVariants } from './styles'
 import { ThemeColor } from 'ui-lib/theme'
 
@@ -11,7 +11,7 @@ interface TextProps {
   /** Variants according to the theme */
   variant?: TextVariants
   /** ThemeUI styling object */
-  sx?: ThemeUIStyleObject
+  sx?: ThemeUICSSObject
 }
 
 /**

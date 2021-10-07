@@ -2,12 +2,12 @@
 
 import React from 'react'
 import { Text } from 'ui-lib/components/Text'
-import type { ThemeUIStyleObject } from 'theme-ui'
+import type { ThemeUICSSObject } from 'theme-ui'
 import type { ThemeColor } from 'ui-lib/theme'
 
 interface BannerTitleProps {
   /** ThemeUI styling object */
-  sx?: ThemeUIStyleObject
+  sx?: ThemeUICSSObject
   /** Color according to the theme */
   color?: ThemeColor
 }

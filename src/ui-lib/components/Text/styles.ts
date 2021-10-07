@@ -1,4 +1,6 @@
-const base = {
+import type { ThemeUICSSObject } from 'theme-ui'
+
+const base: ThemeUICSSObject = {
   color: 'black',
   fontFamily: 'body',
   fontSize: 'm',
@@ -6,29 +8,29 @@ const base = {
   lineHeight: 1.25,
 }
 
-const primary = {
+const primary: ThemeUICSSObject = {
   ...base,
   fontSize: 'l',
 }
 
-const input = {
+const input: ThemeUICSSObject = {
   ...base,
 }
 
-const tag = {
+const tag: ThemeUICSSObject = {
   ...base,
   fontSize: 's',
   lineHeight: 1,
 }
 
-const title = {
+const title: ThemeUICSSObject = {
   ...base,
   color: 'black900',
   fontSize: 'xl',
   fontWeight: 'bold',
 }
 
-const banner = {
+const banner: ThemeUICSSObject = {
   ...base,
   color: 'white',
   fontSize: 'xxl',

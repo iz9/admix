@@ -1,13 +1,13 @@
 /** @jsxImportSource theme-ui */
 
 import React from 'react'
-import type { ThemeUIStyleObject } from 'theme-ui'
+import type { ThemeUICSSObject } from 'theme-ui'
 import type { ThemeColor } from '../../theme'
 import { Text } from '../Text'
 
 interface TagProps {
   /** ThemeUI styling object */
-  sx?: ThemeUIStyleObject
+  sx?: ThemeUICSSObject
   /** Color of the text and border. According to the theme */
   color?: ThemeColor
 }

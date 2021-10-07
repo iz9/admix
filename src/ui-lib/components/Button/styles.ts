@@ -1,4 +1,6 @@
-const buttonBase = {
+import type { ThemeUICSSObject } from 'theme-ui'
+
+const buttonBase: ThemeUICSSObject = {
   bg: 'primary',
   border: 'none',
   color: 'white',
@@ -16,7 +18,7 @@ const buttonBase = {
   },
 }
 
-const transparent = {
+const transparent: ThemeUICSSObject = {
   ...buttonBase,
   bg: 'transparent',
   borderRadius: '0',
@@ -24,13 +26,13 @@ const transparent = {
   fontSize: 's',
 }
 
-const primary = {
+const primary: ThemeUICSSObject = {
   ...buttonBase,
   borderRadius: '10px',
   fontSize: 'm',
 }
 
-const primarySmall = {
+const primarySmall: ThemeUICSSObject = {
   ...primary,
   fontSize: 's',
   padding: '5px',

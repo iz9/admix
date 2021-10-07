@@ -8,6 +8,7 @@ export const colors = {
   black400: '#9D9FAD',
   gray: '#7F8193',
   gray800: '#C4CAD6',
+  gray700: '#DCDFEE',
   blueCrayola: '#1A73E9',
   accentPink: '#ED2EFF',
   accentYellow: '#FCC012',
