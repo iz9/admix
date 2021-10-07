@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SvgIcon  /> should match snapshot 1`] = `
+<div
+  class="css-1bh4yqt-SvgContainer"
+>
+  <i>
+    svg
+  </i>
+</div>
+`;
