@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Range  /> should match snapshot 1`] = `
+<div
+  class="css-150hjay-Slider"
+>
+  <input
+    class="css-uyrdy6-InputRange"
+    data-range-direction="min"
+    max="100"
+    min="0"
+    type="range"
+    value="0"
+  />
+  <input
+    class="css-ngyobf-InputRange"
+    data-range-direction="max"
+    max="100"
+    min="0"
+    type="range"
+    value="100"
+  />
+  <div
+    class="css-1126mpn-SliderTrack"
+  />
+  <div
+    class="css-13dxkqg-SliderTrack"
+  />
+</div>
+`;

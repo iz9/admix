@@ -21,11 +21,6 @@ export const InputRange: React.FC<{
     sx.zIndex = 4
   }
 
-  const changeHandler = (e: any) => {
-    console.log('INPUT CHANGE EVENT! from input!')
-    onChange(e)
-  }
-
   return (
     <input
       {...{
@@ -33,7 +28,7 @@ export const InputRange: React.FC<{
         min,
         max,
         value,
-        onChange: changeHandler,
+        onChange,
         [rangeDirectionAttr]: direction,
         sx,
       }}
