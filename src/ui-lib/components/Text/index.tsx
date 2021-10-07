@@ -4,10 +4,11 @@ import React from 'react'
 import type { ThemeUICSSObject } from 'theme-ui'
 import type { TextVariants } from './styles'
 import { ThemeColor } from 'ui-lib/theme'
+import { Property } from 'csstype'
 
 interface TextProps {
   /** Color name according to the theme */
-  color?: ThemeColor
+  color?: ThemeColor | Property.Color
   /** Variants according to the theme */
   variant?: TextVariants
   /** ThemeUI styling object */

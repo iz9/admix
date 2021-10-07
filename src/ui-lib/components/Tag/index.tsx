@@ -3,13 +3,14 @@
 import React from 'react'
 import type { ThemeUICSSObject } from 'theme-ui'
 import type { ThemeColor } from '../../theme'
+import type { Property } from 'csstype'
 import { Text } from '../Text'
 
 interface TagProps {
   /** ThemeUI styling object */
   sx?: ThemeUICSSObject
   /** Color of the text and border. According to the theme */
-  color?: ThemeColor
+  color?: ThemeColor | Property.Color
 }
 
 /**

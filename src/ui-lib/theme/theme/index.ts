@@ -7,10 +7,6 @@ import { colors } from './colors'
 import { buttons } from 'ui-lib/components/Button/styles'
 import { text } from 'ui-lib/components/Text/styles'
 
-import type { FontSizesAlias } from './fontSizes'
-import type { FontWeightsAlias } from './fontWeights'
-import type { ThemeColor } from './colors'
-
 const theme = makeTheme({
   colors,
   fontSizes,
@@ -33,7 +29,9 @@ type ExactTheme = typeof theme
 interface ExactContextValue extends Omit<ThemeUIContextValue, 'theme'> {
   theme: ExactTheme
 }
-
 const useTheme = useThemeUI as unknown as () => ExactContextValue
+
 export { useTheme, theme }
-export type { FontWeightsAlias, FontSizesAlias, ThemeColor }
+export type { FontSizesAlias } from './fontSizes'
+export type { FontWeightsAlias } from './fontWeights'
+export type { ThemeColor } from './colors'
