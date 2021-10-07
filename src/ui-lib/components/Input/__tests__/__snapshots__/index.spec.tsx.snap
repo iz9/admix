@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input  /> should match snapshot 1`] = `
+<div
+  class="css-15kt1z8-Input"
+>
+  <input
+    class="css-ie6us4-Input"
+    value="value"
+  />
+</div>
+`;
