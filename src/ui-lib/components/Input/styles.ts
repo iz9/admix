@@ -1,6 +1,7 @@
 import type { ThemeUICSSObject } from 'theme-ui'
 import { ThemeColor } from '../../theme'
 import { Property } from 'csstype'
+import { CSSSelector } from '../../utils'
 
 export type IconPosition = 'before' | 'after'
 export const getIconContainerStyles = (
@@ -43,12 +44,12 @@ export const getInputStyles = ({
     padding: '12px',
     position: 'relative',
     width: '100%',
-    '&:focus': {
-      borderColor: 'black300',
+    [CSSSelector.FOCUS]: {
+      borderColor: color,
       outline: 'none',
     },
-    ['&::placeholder']: {
-      color,
+    [CSSSelector.PLACEHOLDER]: {
+      color: 'gray700',
     },
   }
 

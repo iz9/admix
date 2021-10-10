@@ -5,7 +5,7 @@ exports[`<Input  /> should match snapshot 1`] = `
   class="css-15kt1z8-Input"
 >
   <input
-    class="css-1t58lvd-Input"
+    class="css-1e0mubn-Input"
     value="value"
   />
 </div>

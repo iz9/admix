@@ -3,6 +3,7 @@
 import React from 'react'
 import type { ThemeUICSSObject } from 'theme-ui'
 import { getInputStyles, getIconContainerStyles, IconPosition } from './styles'
+
 import { ThemeColor } from '../../theme'
 import { Property } from 'csstype'
 
