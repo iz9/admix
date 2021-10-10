@@ -6,7 +6,7 @@ import type { ButtonVariant } from './styles'
 
 interface ButtonProps {
   /** Click handler */
-  onClick: (e?: React.MouseEvent) => void
+  onClick: (e: React.MouseEvent) => void
   /** Same as html disabled attr */
   disabled?: boolean
   /** ThemeUI styling object */
