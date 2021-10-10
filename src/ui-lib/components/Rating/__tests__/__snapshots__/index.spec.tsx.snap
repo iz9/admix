@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Rating  /> should match snapshot 1`] = `
+<div
+  class="css-1hyrffc-Rating"
+>
+  <button
+    class="css-tikvsr-Button"
+    data-star-index="0"
+  >
+    <div
+      class="css-1bh4yqt-SvgContainer"
+    >
+      <svg
+        class="css-1npa4ee-SvgIcon"
+      />
+    </div>
+  </button>
+  <button
+    class="css-tikvsr-Button"
+    data-star-index="1"
+  >
+    <div
+      class="css-1bh4yqt-SvgContainer"
+    >
+      <svg
+        class="css-1npa4ee-SvgIcon"
+      />
+    </div>
+  </button>
+  <button
+    class="css-tikvsr-Button"
+    data-star-index="2"
+  >
+    <div
+      class="css-1bh4yqt-SvgContainer"
+    >
+      <svg
+        class="css-1npa4ee-SvgIcon"
+      />
+    </div>
+  </button>
+  <button
+    class="css-tikvsr-Button"
+    data-star-index="3"
+  >
+    <div
+      class="css-1bh4yqt-SvgContainer"
+    >
+      <svg
+        class="css-1npa4ee-SvgIcon"
+      />
+    </div>
+  </button>
+  <button
+    class="css-tikvsr-Button"
+    data-star-index="4"
+  >
+    <div
+      class="css-1bh4yqt-SvgContainer"
+    >
+      <svg
+        class="css-2h46el-SvgIcon"
+      />
+    </div>
+  </button>
+</div>
+`;
