@@ -5,6 +5,9 @@ module.exports = {
     '**/__tests__/**/*.+(ts|tsx|js)',
     '**/?(*.)+(spec|test).+(ts|tsx|js)',
   ],
+  moduleNameMapper: {
+    '\\.svg$': '<rootDir>/src/ui-lib/assets/svg/__mocks__/svgrMock.ts',
+  },
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
