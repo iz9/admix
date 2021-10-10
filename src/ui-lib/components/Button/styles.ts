@@ -1,4 +1,5 @@
 import type { ThemeUICSSObject } from 'theme-ui'
+import { CSSSelector } from 'ui-lib/utils'
 
 const buttonBase: ThemeUICSSObject = {
   bg: 'primary',
@@ -7,13 +8,13 @@ const buttonBase: ThemeUICSSObject = {
   fontFamily: 'body',
   fontWeight: 'body',
   padding: '10px',
-  '&:hover': {
+  [CSSSelector.HOVER]: {
     cursor: 'pointer',
   },
-  '&:active': {
+  [CSSSelector.ACTIVE]: {
     bg: 'secondary',
   },
-  '&:disabled': {
+  [CSSSelector.DISABLED]: {
     bg: 'gray',
   },
 }
@@ -24,6 +25,9 @@ const transparent: ThemeUICSSObject = {
   borderRadius: '0',
   color: 'primary',
   fontSize: 's',
+  [CSSSelector.ACTIVE]: {
+    bg: 'transparent',
+  },
 }
 
 const primary: ThemeUICSSObject = {
